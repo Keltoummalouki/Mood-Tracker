@@ -5,7 +5,7 @@ export default function Header() {
 <header className="sticky top-0 z-50 w-full flex items-center justify-between px-6 py-4 bg-white dark:bg-black rounded-xl shadow mb-8">
             <div className="flex items-center gap-2">
                 <h1 className="text-black dark:text-white font-bold text-2xl">
-                    Hey, <span className="font-bold">User!</span>
+                    Hey <span className="font-bold">!</span>
                 </h1>
                 <span className="text-2xl">👋</span>
             </div>
