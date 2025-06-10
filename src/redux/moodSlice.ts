@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type Mood = 'happy' | 'sad' | 'angry' | 'neutral' | ''
+export type Mood = 'happy' | 'sad' | 'angry' | 'neutral' | ''
 
 interface MoodState {
     currentMood: Mood

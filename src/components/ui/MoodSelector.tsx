@@ -5,6 +5,7 @@ import { setMood } from '@/redux/moodSlice'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import type { Mood } from '@/redux/moodSlice'
 
+
 export default function MoodSelector() {
     const dispatch = useDispatch()
 
