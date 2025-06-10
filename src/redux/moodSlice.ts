@@ -1,32 +1,32 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 
-export type Mood = 'happy' | 'sad' | 'angry' | 'neutral' | ''
+export type Mood = "happy" | "sad" | "angry" | "neutral" | ""
 
 interface MoodState {
-    currentMood: Mood
-    history: Mood[]
+  currentMood: Mood
+  history: Mood[]
 }
 
 const initialState: MoodState = {
-    currentMood : '',
-    history: [],
+  currentMood: "",
+  history: [],
 }
 
 export const moodSlice = createSlice({
-    name: 'mood',
-    initialState,
-    reducers: {
-        setMood: (state, action: PayloadAction<Mood>) => {
-            state.currentMood = action.payload
-            if(action.payload !== ''){
-                state.history.push(action.payload)
-            }
-        },
-        clearHistory: (state) => {
-            state.history = []
-        },
+  name: "mood",
+  initialState,
+  reducers: {
+    setMood: (state, action: PayloadAction<Mood>) => {
+      state.currentMood = action.payload
+      if (action.payload !== "") {
+        state.history.push(action.payload)
+      }
     },
+    clearHistory: (state) => {
+      state.history = []
+    },
+  },
 })
 
-export const { setMood , clearHistory } = moodSlice.actions
+export const { setMood, clearHistory } = moodSlice.actions
 export default moodSlice.reducer
