@@ -48,15 +48,14 @@ export default function MoodCard() {
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.5 }}
         transition={{ duration: 0.4 }}
-        className={`m-7 rounded-2xl p-6 ml-22 shadow-lg w-60 text-center ${mood.color}`}
-        
+        className={`m-7 rounded-2xl p-6 shadow-lg w-60 text-center ${mood.color} mx-auto`}
     >
         <div className="text-5xl mb-4">{mood.emoji}</div>
-        <h2 className="text-xl font-bold capitalize">{currentMood}</h2>
+        <h2 className="text-xl font-bold capitalize font-poppins">{currentMood}</h2>
 
       <Button
         variant="outline"
-        className="text-black dark:text-white border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 "
+        className="text-black dark:text-black border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 "
         onClick={() => dispatch(setMood(''))}
       >
         Reset Mood
